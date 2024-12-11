@@ -23,4 +23,8 @@ public class MessageService {
     public void addMessage(Message message) {
         messages.add(message);
     }
+
+    public void removeMessage(String id) {
+    messages.removeIf(message -> message.getId().equals(id));
+    }
 }
